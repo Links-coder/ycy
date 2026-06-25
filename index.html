@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>YCY 摄影</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300;400;600&family=Noto+Sans+SC:wght@300;400&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- 导航栏 -->
+  <nav class="navbar" id="navbar">
+    <button class="nav-menu-btn" id="menuBtn" aria-label="菜单">
+      <span></span><span></span><span></span>
+    </button>
+    <a href="#" class="nav-logo">YCY</a>
+    <button class="nav-search-btn" id="searchBtn" aria-label="搜索">
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+        <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+      </svg>
+    </button>
+  </nav>
+
+  <!-- 侧边菜单 -->
+  <div class="side-menu" id="sideMenu">
+    <button class="side-menu-close" id="menuClose">✕</button>
+    <nav class="side-menu-nav">
+      <a href="#hero">首页</a>
+      <a href="#gallery">作品集</a>
+      <a href="#about">关于</a>
+    </nav>
+    <div class="side-menu-cats">
+      <p data-cat="扫街">扫街</p>
+      <p data-cat="钟山风景区">钟山风景区</p>
+      <p data-cat="玄武湖">玄武湖</p>
+      <p data-cat="莫愁湖">莫愁湖</p>
+      <p data-cat="人像">人像</p>
+    </div>
+    <div class="side-menu-footer">
+      <p>YCY 摄影工作室</p>
+      <p>南京 · 光影记录者</p>
+    </div>
+  </div>
+  <div class="overlay" id="overlay"></div>
+
+  <!-- 搜索框 -->
+  <div class="search-bar" id="searchBar">
+    <input type="text" id="searchInput" placeholder="搜索分类..." />
+    <button id="searchClose">✕</button>
+  </div>
+
+  <!-- Hero 轮播 -->
+  <section class="hero" id="hero">
+    <div class="hero-slides">
+      <div class="hero-slide active" style="background-image:url('扫街/_DSC3668.jpg')">
+        <div class="hero-content">
+          <p class="hero-tag">YCY · 南京</p>
+          <h1>扫街</h1>
+          <p class="hero-sub">城市里的光与影，烟火人情</p>
+          <a href="#gallery" class="hero-btn">探索作品</a>
+        </div>
+      </div>
+      <div class="hero-slide" style="background-image:url('钟山风景区/DSC_2031.jpg')">
+        <div class="hero-content">
+          <p class="hero-tag">YCY · 南京</p>
+          <h1>钟山风景区</h1>
+          <p class="hero-sub">云雾漫山，金陵古城在望</p>
+          <a href="#gallery" class="hero-btn">探索作品</a>
+        </div>
+      </div>
+      <div class="hero-slide" style="background-image:url('玄武湖/DSC_3624.jpg')">
+        <div class="hero-content">
+          <p class="hero-tag">YCY · 南京</p>
+          <h1>玄武湖</h1>
+          <p class="hero-sub">城中湖的晨光与静谧</p>
+          <a href="#gallery" class="hero-btn">探索作品</a>
+        </div>
+      </div>
+      <div class="hero-slide" style="background-image:url('莫愁湖/日落.jpg')">
+        <div class="hero-content">
+          <p class="hero-tag">YCY · 南京</p>
+          <h1>莫愁湖</h1>
+          <p class="hero-sub">柔波映落日，湖畔烟霞醉</p>
+          <a href="#gallery" class="hero-btn">探索作品</a>
+        </div>
+      </div>
+      <div class="hero-slide" style="background-image:url('人像/20260618-_DSC4709.jpg')">
+        <div class="hero-content">
+          <p class="hero-tag">YCY · 南京</p>
+          <h1>人像</h1>
+          <p class="hero-sub">光影与凝视之间，留住时间</p>
+          <a href="#gallery" class="hero-btn">探索作品</a>
+        </div>
+      </div>
+    </div>
+    <div class="hero-dots">
+      <span class="dot active" data-idx="0"></span>
+      <span class="dot" data-idx="1"></span>
+      <span class="dot" data-idx="2"></span>
+      <span class="dot" data-idx="3"></span>
+      <span class="dot" data-idx="4"></span>
+    </div>
+    <button class="hero-arrow hero-prev">&#8592;</button>
+    <button class="hero-arrow hero-next">&#8594;</button>
+    <div class="hero-scroll-hint"><span></span><p>向下滚动</p></div>
+  </section>
+
+  <!-- 简介 -->
+  <section class="about-intro" id="about">
+    <div class="about-inner">
+      <p class="about-studio">YCY PHOTOGRAPHY</p>
+      <h2 class="about-title">记录南京的光与影</h2>
+      <p class="about-text">
+        行走于湖畔山间与街头巷陌，用镜头凝住每个值得珍藏的瞬间。<br />
+        扫街的烟火、钟山的云雾、玄武湖的晨光，还有莫愁湖的柔波与每一次人像的凝视。
+      </p>
+      <div class="about-stats">
+        <div class="stat"><span class="stat-num">109</span><span class="stat-label">作品</span></div>
+        <div class="stat-div"></div>
+        <div class="stat"><span class="stat-num">5</span><span class="stat-label">分类</span></div>
+        <div class="stat-div"></div>
+        <div class="stat"><span class="stat-num">2026</span><span class="stat-label">年份</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 分类 + 图片墙 -->
+  <section class="gallery-section" id="gallery">
+
+    <div class="filter-bar">
+      <button class="filter-btn active" data-filter="all">全部</button>
+      <button class="filter-btn" data-filter="扫街">扫街</button>
+      <button class="filter-btn" data-filter="钟山风景区">钟山风景区</button>
+      <button class="filter-btn" data-filter="玄武湖">玄武湖</button>
+      <button class="filter-btn" data-filter="莫愁湖">莫愁湖</button>
+      <button class="filter-btn" data-filter="人像">人像</button>
+    </div>
+
+    <div class="photo-grid" id="photoGrid">
+
+      <!-- ===== 扫街 38张 ===== -->
+      <div class="grid-item" data-cat="扫街"><img src="扫街/_DSC3033.jpg" alt="扫街" loading="lazy"/><div class="item-overlay"><span>扫街</span></div></div>
+      <div class="grid-item" data-cat="扫街"><img src="扫街/_DSC3064.jpg" alt="扫街" loading="lazy"/><div class="item-overlay"><span>扫街</span></div></div>
+      <div class="grid-item" data-cat="扫街"><img src="扫街/_DSC3073.jpg" alt="扫街" loading="lazy"/><div class="item-overlay"><span>扫街</span></div></div>
+      <div class="grid-item" data-cat="扫街"><img src="扫街/_DSC3091.jpg" alt="扫街" loading="lazy"/><div class="item-overlay"><span>扫街</span></div></div>
+      <div class="grid-item" data-cat="扫街"><img src="扫街/_DSC3095.jpg" alt="扫街" loading="lazy"/><div class="item-overlay"><span>扫街</span></div></div>
+      <div class="grid-item" data-cat="扫街"><img src="扫街/_DSC3102.jpg" alt="扫街" loading="lazy"/><div class="item-overlay"><span>扫街</span></div></div>
+      <div class="grid-item" data-cat="扫街"><img src="扫街/_DSC3104.jpg" alt="扫街" loading="lazy"/><div class="item-overlay"><span>扫街</span></div></div>
+      <div class="grid-item" data-cat="扫街"><img src="扫街/_DSC3107.jpg" alt="扫街" loading="lazy"/><div class="item-overlay"><span>扫街</span></div></div>
+      <div class="grid-item" data-cat="扫街"><img src="扫街/_DSC3137.jpg" alt="扫街" loading="lazy"/><div class="item-overlay"><span>扫街</span></div></div>
+      <div class="grid-item" data-cat="扫街"><img src="扫街/_DSC3138.jpg" alt="扫街" loading="lazy"/><div class="item-overlay"><span>扫街</span></div></div>
+      <div class="grid-item" data-cat="扫街"><img src="扫街/_DSC3649.jpg" alt="扫街" loading="lazy"/><div class="item-overlay"><span>扫街</span></div></div>
+      <div class="grid-item" data-cat="扫街"><img src="扫街/_DSC3668.jpg" alt="扫街" loading="lazy"/><div class="item-overlay"><span>扫街</span></div></div>
+      <div class="grid-item" data-cat="扫街"><img src="扫街/_DSC3677.jpg" alt="扫街" loading="lazy"/><div class="item-overlay"><span>扫街</span></div></div>
+      <div class="grid-item" data-cat="扫街"><img src="扫街/_DSC3682.jpg" alt="扫街" loading="lazy"/><div class="item-overlay"><span>扫街</span></div></div>
+      <div class="grid-item" data-cat="扫街"><img src="扫街/_DSC3700.jpg" alt="扫街" loading="lazy"/><div class="item-overlay"><span>扫街</span></div></div>
+      <div class="grid-item" data-cat="扫街"><img src="扫街/_DSC3703.jpg" alt="扫街" loading="lazy"/><div class="item-overlay"><span>扫街</span></div></div>
+      <div class="grid-item" data-cat="扫街"><img src="扫街/_DSC3706.jpg" alt="扫街" loading="lazy"/><div class="item-overlay"><span>扫街</span></div></div>
+      <div class="grid-item" data-cat="扫街"><img src="扫街/_DSC3718.jpg" alt="扫街" loading="lazy"/><div class="item-overlay"><span>扫街</span></div></div>
+      <div class="grid-item" data-cat="扫街"><img src="扫街/_DSC3737.jpg" alt="扫街" loading="lazy"/><div class="item-overlay"><span>扫街</span></div></div>
+      <div class="grid-item" data-cat="扫街"><img src="扫街/_DSC3742.jpg" alt="扫街" loading="lazy"/><div class="item-overlay"><span>扫街</span></div></div>
+      <div class="grid-item" data-cat="扫街"><img src="扫街/_DSC3763.jpg" alt="扫街" loading="lazy"/><div class="item-overlay"><span>扫街</span></div></div>
+      <div class="grid-item" data-cat="扫街"><img src="扫街/_DSC3784.jpg" alt="扫街" loading="lazy"/><div class="item-overlay"><span>扫街</span></div></div>
+      <div class="grid-item" data-cat="扫街"><img src="扫街/_DSC3793.jpg" alt="扫街" loading="lazy"/><div class="item-overlay"><span>扫街</span></div></div>
+      <div class="grid-item" data-cat="扫街"><img src="扫街/_DSC3814.jpg" alt="扫街" loading="lazy"/><div class="item-overlay"><span>扫街</span></div></div>
+      <div class="grid-item" data-cat="扫街"><img src="扫街/_DSC3860.jpg" alt="扫街" loading="lazy"/><div class="item-overlay"><span>扫街</span></div></div>
+      <div class="grid-item" data-cat="扫街"><img src="扫街/_DSC3886.jpg" alt="扫街" loading="lazy"/><div class="item-overlay"><span>扫街</span></div></div>
+      <div class="grid-item" data-cat="扫街"><img src="扫街/_DSC3890.jpg" alt="扫街" loading="lazy"/><div class="item-overlay"><span>扫街</span></div></div>
+      <div class="grid-item" data-cat="扫街"><img src="扫街/幸福照片墙.jpg" alt="扫街" loading="lazy"/><div class="item-overlay"><span>扫街</span></div></div>
+      <div class="grid-item" data-cat="扫街"><img src="扫街/窗外的黄与绿.jpg" alt="扫街" loading="lazy"/><div class="item-overlay"><span>扫街</span></div></div>
+      <div class="grid-item" data-cat="扫街"><img src="扫街/获奖.jpg" alt="扫街" loading="lazy"/><div class="item-overlay"><span>扫街</span></div></div>
+      <div class="grid-item" data-cat="扫街"><img src="扫街/DSC_0086.jpg" alt="扫街" loading="lazy"/><div class="item-overlay"><span>扫街</span></div></div>
+      <div class="grid-item" data-cat="扫街"><img src="扫街/DSC_0326.jpg" alt="扫街" loading="lazy"/><div class="item-overlay"><span>扫街</span></div></div>
+      <div class="grid-item" data-cat="扫街"><img src="扫街/DSC_0336.jpg" alt="扫街" loading="lazy"/><div class="item-overlay"><span>扫街</span></div></div>
+      <div class="grid-item" data-cat="扫街"><img src="扫街/_DSC2699.JPG" alt="扫街" loading="lazy"/><div class="item-overlay"><span>扫街</span></div></div>
+      <div class="grid-item" data-cat="扫街"><img src="扫街/_DSC2702.JPG" alt="扫街" loading="lazy"/><div class="item-overlay"><span>扫街</span></div></div>
+      <div class="grid-item" data-cat="扫街"><img src="扫街/_DSC2709.JPG" alt="扫街" loading="lazy"/><div class="item-overlay"><span>扫街</span></div></div>
+      <div class="grid-item" data-cat="扫街"><img src="扫街/_DSC2850.JPG" alt="扫街" loading="lazy"/><div class="item-overlay"><span>扫街</span></div></div>
+      <div class="grid-item" data-cat="扫街"><img src="扫街/_DSC2872.JPG" alt="扫街" loading="lazy"/><div class="item-overlay"><span>扫街</span></div></div>
+
+      <!-- ===== 钟山风景区 30张 ===== -->
+      <div class="grid-item" data-cat="钟山风景区"><img src="钟山风景区/DSC_0378.jpg" alt="钟山风景区" loading="lazy"/><div class="item-overlay"><span>钟山风景区</span></div></div>
+      <div class="grid-item" data-cat="钟山风景区"><img src="钟山风景区/DSC_2031.jpg" alt="钟山风景区" loading="lazy"/><div class="item-overlay"><span>钟山风景区</span></div></div>
+      <div class="grid-item" data-cat="钟山风景区"><img src="钟山风景区/DSC_2057.jpg" alt="钟山风景区" loading="lazy"/><div class="item-overlay"><span>钟山风景区</span></div></div>
+      <div class="grid-item" data-cat="钟山风景区"><img src="钟山风景区/DSC_2085.jpg" alt="钟山风景区" loading="lazy"/><div class="item-overlay"><span>钟山风景区</span></div></div>
+      <div class="grid-item" data-cat="钟山风景区"><img src="钟山风景区/DSC_2094.jpg" alt="钟山风景区" loading="lazy"/><div class="item-overlay"><span>钟山风景区</span></div></div>
+      <div class="grid-item" data-cat="钟山风景区"><img src="钟山风景区/DSC_2152.jpg" alt="钟山风景区" loading="lazy"/><div class="item-overlay"><span>钟山风景区</span></div></div>
+      <div class="grid-item" data-cat="钟山风景区"><img src="钟山风景区/DSC_2164.jpg" alt="钟山风景区" loading="lazy"/><div class="item-overlay"><span>钟山风景区</span></div></div>
+      <div class="grid-item" data-cat="钟山风景区"><img src="钟山风景区/DSC_2172.jpg" alt="钟山风景区" loading="lazy"/><div class="item-overlay"><span>钟山风景区</span></div></div>
+      <div class="grid-item" data-cat="钟山风景区"><img src="钟山风景区/DSC_2182.jpg" alt="钟山风景区" loading="lazy"/><div class="item-overlay"><span>钟山风景区</span></div></div>
+      <div class="grid-item" data-cat="钟山风景区"><img src="钟山风景区/_DSC2915.JPG" alt="钟山风景区" loading="lazy"/><div class="item-overlay"><span>钟山风景区</span></div></div>
+      <div class="grid-item" data-cat="钟山风景区"><img src="钟山风景区/_DSC2920.JPG" alt="钟山风景区" loading="lazy"/><div class="item-overlay"><span>钟山风景区</span></div></div>
+      <div class="grid-item" data-cat="钟山风景区"><img src="钟山风景区/_DSC2922.JPG" alt="钟山风景区" loading="lazy"/><div class="item-overlay"><span>钟山风景区</span></div></div>
+      <div class="grid-item" data-cat="钟山风景区"><img src="钟山风景区/_DSC2923.JPG" alt="钟山风景区" loading="lazy"/><div class="item-overlay"><span>钟山风景区</span></div></div>
+      <div class="grid-item" data-cat="钟山风景区"><img src="钟山风景区/_DSC2927.JPG" alt="钟山风景区" loading="lazy"/><div class="item-overlay"><span>钟山风景区</span></div></div>
+      <div class="grid-item" data-cat="钟山风景区"><img src="钟山风景区/_DSC2931.JPG" alt="钟山风景区" loading="lazy"/><div class="item-overlay"><span>钟山风景区</span></div></div>
+      <div class="grid-item" data-cat="钟山风景区"><img src="钟山风景区/_DSC2933.JPG" alt="钟山风景区" loading="lazy"/><div class="item-overlay"><span>钟山风景区</span></div></div>
+      <div class="grid-item" data-cat="钟山风景区"><img src="钟山风景区/_DSC2935.JPG" alt="钟山风景区" loading="lazy"/><div class="item-overlay"><span>钟山风景区</span></div></div>
+      <div class="grid-item" data-cat="钟山风景区"><img src="钟山风景区/_DSC2937.JPG" alt="钟山风景区" loading="lazy"/><div class="item-overlay"><span>钟山风景区</span></div></div>
+      <div class="grid-item" data-cat="钟山风景区"><img src="钟山风景区/_DSC2943.JPG" alt="钟山风景区" loading="lazy"/><div class="item-overlay"><span>钟山风景区</span></div></div>
+      <div class="grid-item" data-cat="钟山风景区"><img src="钟山风景区/_DSC2947.JPG" alt="钟山风景区" loading="lazy"/><div class="item-overlay"><span>钟山风景区</span></div></div>
+      <div class="grid-item" data-cat="钟山风景区"><img src="钟山风景区/_DSC2960.JPG" alt="钟山风景区" loading="lazy"/><div class="item-overlay"><span>钟山风景区</span></div></div>
+      <div class="grid-item" data-cat="钟山风景区"><img src="钟山风景区/_DSC2988.JPG" alt="钟山风景区" loading="lazy"/><div class="item-overlay"><span>钟山风景区</span></div></div>
+      <div class="grid-item" data-cat="钟山风景区"><img src="钟山风景区/_DSC2992.JPG" alt="钟山风景区" loading="lazy"/><div class="item-overlay"><span>钟山风景区</span></div></div>
+      <div class="grid-item" data-cat="钟山风景区"><img src="钟山风景区/_DSC3293.JPG" alt="钟山风景区" loading="lazy"/><div class="item-overlay"><span>钟山风景区</span></div></div>
+      <div class="grid-item" data-cat="钟山风景区"><img src="钟山风景区/_DSC3306.JPG" alt="钟山风景区" loading="lazy"/><div class="item-overlay"><span>钟山风景区</span></div></div>
+      <div class="grid-item" data-cat="钟山风景区"><img src="钟山风景区/_DSC3308.JPG" alt="钟山风景区" loading="lazy"/><div class="item-overlay"><span>钟山风景区</span></div></div>
+      <div class="grid-item" data-cat="钟山风景区"><img src="钟山风景区/_DSC3325.JPG" alt="钟山风景区" loading="lazy"/><div class="item-overlay"><span>钟山风景区</span></div></div>
+      <div class="grid-item" data-cat="钟山风景区"><img src="钟山风景区/_DSC3327.JPG" alt="钟山风景区" loading="lazy"/><div class="item-overlay"><span>钟山风景区</span></div></div>
+      <div class="grid-item" data-cat="钟山风景区"><img src="钟山风景区/_DSC3333.JPG" alt="钟山风景区" loading="lazy"/><div class="item-overlay"><span>钟山风景区</span></div></div>
+      <div class="grid-item" data-cat="钟山风景区"><img src="钟山风景区/_DSC3354.JPG" alt="钟山风景区" loading="lazy"/><div class="item-overlay"><span>钟山风景区</span></div></div>
+
+      <!-- ===== 玄武湖 9张 ===== -->
+      <div class="grid-item" data-cat="玄武湖"><img src="玄武湖/DSC_3592.jpg" alt="玄武湖" loading="lazy"/><div class="item-overlay"><span>玄武湖</span></div></div>
+      <div class="grid-item" data-cat="玄武湖"><img src="玄武湖/DSC_3597.jpg" alt="玄武湖" loading="lazy"/><div class="item-overlay"><span>玄武湖</span></div></div>
+      <div class="grid-item" data-cat="玄武湖"><img src="玄武湖/DSC_3619.jpg" alt="玄武湖" loading="lazy"/><div class="item-overlay"><span>玄武湖</span></div></div>
+      <div class="grid-item" data-cat="玄武湖"><img src="玄武湖/DSC_3624.jpg" alt="玄武湖" loading="lazy"/><div class="item-overlay"><span>玄武湖</span></div></div>
+      <div class="grid-item" data-cat="玄武湖"><img src="玄武湖/DSC_3626.jpg" alt="玄武湖" loading="lazy"/><div class="item-overlay"><span>玄武湖</span></div></div>
+      <div class="grid-item" data-cat="玄武湖"><img src="玄武湖/DSC_3635.jpg" alt="玄武湖" loading="lazy"/><div class="item-overlay"><span>玄武湖</span></div></div>
+      <div class="grid-item" data-cat="玄武湖"><img src="玄武湖/DSC_3644.jpg" alt="玄武湖" loading="lazy"/><div class="item-overlay"><span>玄武湖</span></div></div>
+      <div class="grid-item" data-cat="玄武湖"><img src="玄武湖/DSC_3645.jpg" alt="玄武湖" loading="lazy"/><div class="item-overlay"><span>玄武湖</span></div></div>
+      <div class="grid-item" data-cat="玄武湖"><img src="玄武湖/DSC_3647.jpg" alt="玄武湖" loading="lazy"/><div class="item-overlay"><span>玄武湖</span></div></div>
+
+      <!-- ===== 莫愁湖 12张 ===== -->
+      <div class="grid-item" data-cat="莫愁湖"><img src="莫愁湖/1-ps.jpg" alt="莫愁湖" loading="lazy"/><div class="item-overlay"><span>莫愁湖</span></div></div>
+      <div class="grid-item" data-cat="莫愁湖"><img src="莫愁湖/2-ps.jpg" alt="莫愁湖" loading="lazy"/><div class="item-overlay"><span>莫愁湖</span></div></div>
+      <div class="grid-item" data-cat="莫愁湖"><img src="莫愁湖/DSC_0894.jpg" alt="莫愁湖" loading="lazy"/><div class="item-overlay"><span>莫愁湖</span></div></div>
+      <div class="grid-item" data-cat="莫愁湖"><img src="莫愁湖/DSC_0901.jpg" alt="莫愁湖" loading="lazy"/><div class="item-overlay"><span>莫愁湖</span></div></div>
+      <div class="grid-item" data-cat="莫愁湖"><img src="莫愁湖/DSC_0903.jpg" alt="莫愁湖" loading="lazy"/><div class="item-overlay"><span>莫愁湖</span></div></div>
+      <div class="grid-item" data-cat="莫愁湖"><img src="莫愁湖/DSC_0921.jpg" alt="莫愁湖" loading="lazy"/><div class="item-overlay"><span>莫愁湖</span></div></div>
+      <div class="grid-item" data-cat="莫愁湖"><img src="莫愁湖/DSC_0993.jpg" alt="莫愁湖" loading="lazy"/><div class="item-overlay"><span>莫愁湖</span></div></div>
+      <div class="grid-item" data-cat="莫愁湖"><img src="莫愁湖/DSC_1026.jpg" alt="莫愁湖" loading="lazy"/><div class="item-overlay"><span>莫愁湖</span></div></div>
+      <div class="grid-item" data-cat="莫愁湖"><img src="莫愁湖/DSC_1029.jpg" alt="莫愁湖" loading="lazy"/><div class="item-overlay"><span>莫愁湖</span></div></div>
+      <div class="grid-item" data-cat="莫愁湖"><img src="莫愁湖/DSC_1035.jpg" alt="莫愁湖" loading="lazy"/><div class="item-overlay"><span>莫愁湖</span></div></div>
+      <div class="grid-item" data-cat="莫愁湖"><img src="莫愁湖/DSC_1043.jpg" alt="莫愁湖" loading="lazy"/><div class="item-overlay"><span>莫愁湖</span></div></div>
+      <div class="grid-item" data-cat="莫愁湖"><img src="莫愁湖/日落.jpg" alt="莫愁湖" loading="lazy"/><div class="item-overlay"><span>莫愁湖</span></div></div>
+
+      <!-- ===== 人像 20张 ===== -->
+      <div class="grid-item" data-cat="人像"><img src="人像/1枫叶-PS.jpg" alt="人像" loading="lazy"/><div class="item-overlay"><span>人像</span></div></div>
+      <div class="grid-item" data-cat="人像"><img src="人像/20260618-_DSC4709.jpg" alt="人像" loading="lazy"/><div class="item-overlay"><span>人像</span></div></div>
+      <div class="grid-item" data-cat="人像"><img src="人像/20260618-_DSC4728.jpg" alt="人像" loading="lazy"/><div class="item-overlay"><span>人像</span></div></div>
+      <div class="grid-item" data-cat="人像"><img src="人像/20260618-_DSC4762.jpg" alt="人像" loading="lazy"/><div class="item-overlay"><span>人像</span></div></div>
+      <div class="grid-item" data-cat="人像"><img src="人像/20260618-_DSC4764.jpg" alt="人像" loading="lazy"/><div class="item-overlay"><span>人像</span></div></div>
+      <div class="grid-item" data-cat="人像"><img src="人像/20260618-_DSC4770.jpg" alt="人像" loading="lazy"/><div class="item-overlay"><span>人像</span></div></div>
+      <div class="grid-item" data-cat="人像"><img src="人像/20260618-_DSC4799.jpg" alt="人像" loading="lazy"/><div class="item-overlay"><span>人像</span></div></div>
+      <div class="grid-item" data-cat="人像"><img src="人像/20260618-_DSC4801.jpg" alt="人像" loading="lazy"/><div class="item-overlay"><span>人像</span></div></div>
+      <div class="grid-item" data-cat="人像"><img src="人像/20260618-_DSC4822.jpg" alt="人像" loading="lazy"/><div class="item-overlay"><span>人像</span></div></div>
+      <div class="grid-item" data-cat="人像"><img src="人像/2举手-PS.jpg" alt="人像" loading="lazy"/><div class="item-overlay"><span>人像</span></div></div>
+      <div class="grid-item" data-cat="人像"><img src="人像/3扶窗-PS.jpg" alt="人像" loading="lazy"/><div class="item-overlay"><span>人像</span></div></div>
+      <div class="grid-item" data-cat="人像"><img src="人像/_DSC3977.jpg" alt="人像" loading="lazy"/><div class="item-overlay"><span>人像</span></div></div>
+      <div class="grid-item" data-cat="人像"><img src="人像/_DSC4116.jpg" alt="人像" loading="lazy"/><div class="item-overlay"><span>人像</span></div></div>
+      <div class="grid-item" data-cat="人像"><img src="人像/_DSC4203.jpg" alt="人像" loading="lazy"/><div class="item-overlay"><span>人像</span></div></div>
+      <div class="grid-item" data-cat="人像"><img src="人像/_DSC4324.jpg" alt="人像" loading="lazy"/><div class="item-overlay"><span>人像</span></div></div>
+      <div class="grid-item" data-cat="人像"><img src="人像/_DSC4330.jpg" alt="人像" loading="lazy"/><div class="item-overlay"><span>人像</span></div></div>
+      <div class="grid-item" data-cat="人像"><img src="人像/_DSC4702.jpg" alt="人像" loading="lazy"/><div class="item-overlay"><span>人像</span></div></div>
+      <div class="grid-item" data-cat="人像"><img src="人像/_DSC4828.jpg" alt="人像" loading="lazy"/><div class="item-overlay"><span>人像</span></div></div>
+      <div class="grid-item" data-cat="人像"><img src="人像/撩发.jpg" alt="人像" loading="lazy"/><div class="item-overlay"><span>人像</span></div></div>
+      <div class="grid-item" data-cat="人像"><img src="人像/终极版.jpg" alt="人像" loading="lazy"/><div class="item-overlay"><span>人像</span></div></div>
+
+    </div>
+  </section>
+
+  <!-- 灯箱 -->
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-close" id="lightboxClose">✕</button>
+    <button class="lightbox-prev" id="lightboxPrev">&#8592;</button>
+    <button class="lightbox-next" id="lightboxNext">&#8594;</button>
+    <div class="lightbox-img-wrap">
+      <img src="" alt="" id="lightboxImg" />
+    </div>
+    <div class="lightbox-info" id="lightboxInfo"></div>
+    <div class="lightbox-counter" id="lightboxCounter"></div>
+  </div>
+
+  <!-- 页脚 -->
+  <footer class="site-footer">
+    <div class="footer-logo">YCY</div>
+    <p class="footer-desc">南京 · 光影记录者</p>
+    <div class="footer-cats">
+      <span data-cat="扫街">扫街</span>
+      <span data-cat="钟山风景区">钟山风景区</span>
+      <span data-cat="玄武湖">玄武湖</span>
+      <span data-cat="莫愁湖">莫愁湖</span>
+      <span data-cat="人像">人像</span>
+    </div>
+    <p class="footer-copy">© 2026 YCY 摄影工作室</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
